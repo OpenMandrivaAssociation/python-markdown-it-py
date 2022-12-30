@@ -34,7 +34,7 @@ This is a Python port of markdown-it, and some of its associated plugins.
 %license LICENSE LICENSE.markdown-it
 %doc README.md
 %{_bindir}/markdown-it
-#%%{py_sitedir}/markdown_it_py
+%{py_sitedir}/markdown_it
 %{py_sitedir}/markdown_it_py-*.*-info
 
 #--------------------------------------------------------------------
