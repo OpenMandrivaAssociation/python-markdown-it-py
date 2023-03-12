@@ -1,6 +1,6 @@
 Summary:	Python port of markdown-it
 Name:		python-markdown-it-py
-Version:	2.1.0
+Version:	2.2.0
 Release:	1
 Group:		Development/Python
 License:	MIT
