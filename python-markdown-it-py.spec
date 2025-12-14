@@ -7,10 +7,10 @@ License:	MIT
 URL:		https://github.com/executablebooks/markdown-it-py
 #Source0:	https://github.com/executablebooks/markdown-it-py/archive/v%{version}/markdown-it-py-%{version}.tar.gz
 Source0:	https://pypi.io/packages/source/m/markdown-it-py/markdown-it-py-%{version}.tar.gz
-BuildRequires:	pkgconfig(python)
-BuildRequires:	python3dist(pip)
-BuildRequires:	python3dist(setuptools)
-BuildRequires:	python3dist(wheel)
+BuildSystem:	python
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
 
 BuildArch:	noarch
 
@@ -36,15 +36,3 @@ This is a Python port of markdown-it, and some of its associated plugins.
 %{_bindir}/markdown-it
 %{py_sitedir}/markdown_it
 %{py_sitedir}/markdown_it_py-*.*-info
-
-#--------------------------------------------------------------------
-
-%prep
-%autosetup -n markdown-it-py-%{version}
-
-%build
-%py_build
- 
-%install
-%py_install
-
