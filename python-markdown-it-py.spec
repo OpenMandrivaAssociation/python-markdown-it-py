@@ -1,18 +1,21 @@
-Summary:	Python port of markdown-it
+%define module markdown_it
+%define oname markdown_it_py
+
 Name:		python-markdown-it-py
-Version:	3.0.0
-Release:	2
+Summary:	Python port of markdown-it
+Version:	4.0.0
+Release:	1
 Group:		Development/Python
 License:	MIT
 URL:		https://github.com/executablebooks/markdown-it-py
-#Source0:	https://github.com/executablebooks/markdown-it-py/archive/v%{version}/markdown-it-py-%{version}.tar.gz
-Source0:	https://pypi.io/packages/source/m/markdown-it-py/markdown-it-py-%{version}.tar.gz
+Source0:	https://github.com/executablebooks/markdown-it-py/archive/v%{version}/%{name}-%{version}.tar.gz
+
 BuildSystem:	python
+BuildArch:	noarch
+BuildRequires:	python%{pyver}dist(flit-core)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(wheel)
-
-BuildArch:	noarch
 
 %description
 Markdown parser, done right. 100% CommonMark support, extensions, syntax
@@ -31,8 +34,8 @@ Features:
 This is a Python port of markdown-it, and some of its associated plugins.
 
 %files
-%license LICENSE LICENSE.markdown-it
 %doc README.md
+%license LICENSE LICENSE.markdown-it
 %{_bindir}/markdown-it
-%{py_sitedir}/markdown_it
-%{py_sitedir}/markdown_it_py-*.*-info
+%{py_sitedir}/%{module}
+%{py_sitedir}/%{oname}-%{version}.dist-info
