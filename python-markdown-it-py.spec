@@ -4,7 +4,7 @@
 Name:		python-markdown-it-py
 Summary:	Python port of markdown-it
 Version:	4.2.0
-Release:	1
+Release:	2
 Group:		Development/Python
 License:	MIT
 URL:		https://github.com/executablebooks/markdown-it-py
